@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:v_care_app/core/theming/styles.dart';
+import 'package:v_care_app/features/onboarding/ui/widgets/doc_image_and_text.dart';
 import 'package:v_care_app/features/onboarding/ui/widgets/doc_logo_and_name.dart';
+import 'package:v_care_app/features/onboarding/ui/widgets/get_started_button.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
@@ -12,9 +15,25 @@ class OnboardingScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.only(top: 30.h, bottom: 30.h),
-            child: const Column(
+            child: Column(
               children: [
-                DocLogoAndName(),
+                const DocLogoAndName(),
+                SizedBox(height: 30.h),
+                const DocImageAndText(),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 30.w),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Manage and schedule all of your medical appointments easily with Docdoc to get a new experience.',
+                        style: TextStyles.font13GrayRegular,
+                        textAlign: TextAlign.center,
+                      ),
+                      SizedBox(height: 30.h),
+                      const GetStartedButton(),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),

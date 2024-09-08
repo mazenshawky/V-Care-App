@@ -12,7 +12,7 @@ class DocLogoAndName extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        SvgPicture.asset(AppAssets.docdocLogo),
+        SvgPicture.asset(SvgsAssets.docdocLogo),
         SizedBox(width: 10.w),
         Text('DocDoc', style: TextStyles.font24Black700Weight),
         SizedBox(height: 30.h),
