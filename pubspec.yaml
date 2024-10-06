@@ -7,27 +7,22 @@ environment:
   sdk: '>=3.4.3 <4.0.0'
 
 dependencies:
+  dio: ^5.6.0
+  easy_localization: ^3.0.7
   flutter:
     sdk: flutter
-  # State management
   flutter_bloc: ^8.1.6
-  # Code generator (mainly used with cubit & retrofit)
-  freezed: ^2.5.7
+  flutter_native_splash: ^2.4.1
+  flutter_screenutil: ^5.9.3
+  flutter_svg: ^2.0.10+1
+  freezed: ^2.5.2
   freezed_annotation: ^2.4.4
-  # For dependency injection
   get_it: ^7.7.0
-   # Automatically generate code for converting to and from JSON by annotating Dart classes
-  json_serializable: ^6.8.0
   json_annotation: ^4.9.0
-  # Networking
-  dio: ^5.6.0
+  json_serializable: ^6.8.0
+  pretty_dio_logger: ^1.4.0
   retrofit: ^4.2.0
   retrofit_generator: ^8.2.0
-  pretty_dio_logger: ^1.4.0
-  # Localization
-  easy_localization: ^3.0.7
-  # For splash screen
-  flutter_native_splash: ^2.4.1
 
 dev_dependencies:
   flutter_lints: ^3.0.0
@@ -36,3 +31,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/svgs/
