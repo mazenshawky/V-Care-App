@@ -16,6 +16,7 @@ class VCareApp extends StatelessWidget {
       minTextAdapt: true,
       child: MaterialApp(
         title: 'V-Care App',
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primaryColor: AppColors.mainBlue,
           scaffoldBackgroundColor: Colors.white,
