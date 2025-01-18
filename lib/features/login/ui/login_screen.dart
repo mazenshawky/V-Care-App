@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:v_care_app/core/helpers/spacer.dart';
+import 'package:v_care_app/core/helpers/my_spacer.dart';
 import 'package:v_care_app/core/theming/styles.dart';
 import 'package:v_care_app/core/widgets/my_text_button.dart';
 import 'package:v_care_app/features/login/data/models/login_request_body.dart';
@@ -66,11 +66,7 @@ class LoginScreen extends StatelessWidget {
 
   void validateThenDoLogin(BuildContext context) {
     if (context.read<LoginCubit>().formKey.currentState!.validate()) {
-      var loginRequestBody = LoginRequestBody(
-        email: context.read<LoginCubit>().emailController.text,
-        password: context.read<LoginCubit>().passwordController.text,
-      );
-      context.read<LoginCubit>().emitLoginStates(loginRequestBody);
+      context.read<LoginCubit>().emitLoginStates();
     }
   }
 }

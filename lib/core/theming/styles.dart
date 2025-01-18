@@ -89,4 +89,10 @@ class TextStyles {
     fontWeight: FontWeightHelper.medium,
     color: AppColors.darkBlue,
   );
+
+  static TextStyle font14GrayRegular = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: AppColors.grey,
+  );
 }
