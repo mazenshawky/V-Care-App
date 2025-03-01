@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:v_care_app/core/app_assets/app_assets.dart';
 import 'package:v_care_app/core/theming/app_colors.dart';
