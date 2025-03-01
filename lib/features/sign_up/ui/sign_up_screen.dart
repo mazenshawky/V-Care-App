@@ -31,7 +31,7 @@ class SignupScreen extends StatelessWidget {
                 MySpacer.vertical(8),
                 Text(
                   'Sign up now and start exploring all that our app has to offer. We\'re excited to welcome you to our community!',
-                  style: TextStyles.font14GrayRegular,
+                  style: TextStyles.font14GreyRegular,
                 ),
                 MySpacer.vertical(36),
                 Column(

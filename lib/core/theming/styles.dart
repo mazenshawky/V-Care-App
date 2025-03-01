@@ -36,8 +36,14 @@ class TextStyles {
     color: AppColors.mainBlue,
   );
 
-  static TextStyle font13GrayRegular = TextStyle(
+  static TextStyle font13GreyRegular = TextStyle(
     fontSize: 13.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: AppColors.grey,
+  );
+
+  static TextStyle font12GreyRegular = TextStyle(
+    fontSize: 12.sp,
     fontWeight: FontWeightHelper.regular,
     color: AppColors.grey,
   );
@@ -90,9 +96,9 @@ class TextStyles {
     color: AppColors.darkBlue,
   );
 
-  static TextStyle font14GrayRegular = TextStyle(
-    fontSize: 14.sp,
-    fontWeight: FontWeightHelper.regular,
-    color: AppColors.grey,
+  static TextStyle font18DarkBlueBold = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColors.darkBlue,
   );
 }

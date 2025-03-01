@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:v_care_app/core/theming/app_colors.dart';
+import 'package:v_care_app/features/home/ui/widgets/home_top_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -9,8 +10,15 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.white,
       body: SafeArea(
-        child: const Center(
-          child: Text('Home Screen'),
+        child: Container(
+          width: double.infinity,
+          margin: const EdgeInsets.fromLTRB(20, 16, 20, 28),
+          child: const Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              HomeTopBar(),
+            ],
+          ),
         ),
       ),
     );
