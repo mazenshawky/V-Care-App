@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:v_care_app/core/theming/app_colors.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -6,11 +7,11 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home Screen'),
-      ),
-      body: const Center(
-        child: Text('Home Screen'),
+      backgroundColor: AppColors.white,
+      body: SafeArea(
+        child: const Center(
+          child: Text('Home Screen'),
+        ),
       ),
     );
   }
