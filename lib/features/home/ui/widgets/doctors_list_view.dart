@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:v_care_app/core/helpers/my_spacer.dart';
 import 'package:v_care_app/core/theming/styles.dart';
+import 'package:v_care_app/features/home/data/models/specializations_response_model.dart';
 
 class DoctorsListView extends StatelessWidget {
-  const DoctorsListView({super.key});
+  const DoctorsListView({super.key, this.doctorsList});
+
+  final List<Doctors?>? doctorsList;
 
   @override
   Widget build(BuildContext context) {
