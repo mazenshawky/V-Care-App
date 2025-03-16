@@ -7,6 +7,7 @@ import 'package:v_care_app/features/home/ui/widgets/doctors_list_view.dart';
 import 'package:v_care_app/features/home/ui/widgets/doctors_speciality_list_view.dart';
 import 'package:v_care_app/features/home/ui/widgets/doctors_speciality_see_all.dart';
 import 'package:v_care_app/features/home/ui/widgets/home_top_bar.dart';
+import 'package:v_care_app/features/home/ui/widgets/specializations_and_doctors_bloc_builder.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -27,9 +28,7 @@ class HomeScreen extends StatelessWidget {
               MySpacer.vertical(24.h),
               const DoctorsSpecialitySeeAll(),
               MySpacer.vertical(18),
-              const DoctorsSpecialityListView(),
-              MySpacer.vertical(18),
-              const DoctorsListView(),
+              const SpecializationsAndDoctorsBlocBuilder(),
             ],
           ),
         ),

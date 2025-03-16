@@ -27,6 +27,8 @@ dependencies:
   json_serializable: ^6.8.0
   json_annotation: ^4.9.0
   pretty_dio_logger: ^1.4.0
+  # Flutter library to load and cache network images.
+  cached_network_image: ^3.3.1
   # Networking
   dio: ^5.6.0
   retrofit: ^4.2.0
