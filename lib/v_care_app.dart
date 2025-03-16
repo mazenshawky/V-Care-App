@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:v_care_app/core/helpers/constants.dart';
 import 'package:v_care_app/core/routing/app_router.dart';
 import 'package:v_care_app/core/routing/routes.dart';
 import 'package:v_care_app/core/theming/app_colors.dart';
@@ -21,7 +22,7 @@ class VCareApp extends StatelessWidget {
           primaryColor: AppColors.mainBlue,
           scaffoldBackgroundColor: Colors.white,
         ),
-        initialRoute: Routes.onBoardingScreen,
+        initialRoute: isLoggedInUser ? Routes.homeScreen : Routes.onBoardingScreen,
         onGenerateRoute: appRouter.generateRoute,
       ),
     );

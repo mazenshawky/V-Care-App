@@ -3,8 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:v_care_app/core/helpers/my_spacer.dart';
 import 'package:v_care_app/core/theming/app_colors.dart';
 import 'package:v_care_app/features/home/ui/widgets/doctors_blue_container.dart';
-import 'package:v_care_app/features/home/ui/widgets/doctors_list_view.dart';
-import 'package:v_care_app/features/home/ui/widgets/doctors_speciality_list_view.dart';
 import 'package:v_care_app/features/home/ui/widgets/doctors_speciality_see_all.dart';
 import 'package:v_care_app/features/home/ui/widgets/home_top_bar.dart';
 import 'package:v_care_app/features/home/ui/widgets/specializations_and_doctors_bloc_builder.dart';
