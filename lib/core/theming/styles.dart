@@ -90,6 +90,12 @@ class TextStyles {
     color: AppColors.grey,
   );
 
+  static TextStyle font14DarkBlueBold = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColors.darkBlue,
+  );
+
   static TextStyle font14LightGreyRegular = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.regular,

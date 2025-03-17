@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:v_care_app/features/home/data/models/specializations_response_model.dart';
-import 'package:v_care_app/features/home/ui/widgets/doctors_list_view_item.dart';
+import 'package:v_care_app/features/home/ui/widgets/doctors_list/doctors_list_view_item.dart';
 
 class DoctorsListView extends StatelessWidget {
   const DoctorsListView({super.key, this.doctorsList});
