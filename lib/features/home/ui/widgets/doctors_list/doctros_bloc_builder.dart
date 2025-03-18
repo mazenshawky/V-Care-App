@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:v_care_app/core/networking/api_error_handler.dart';
 import 'package:v_care_app/features/home/logic/home_cubit.dart';
 import 'package:v_care_app/features/home/logic/home_state.dart';
 
@@ -19,7 +18,7 @@ class DoctorsBlocBuilder extends StatelessWidget {
           doctorsSuccess: (doctorsList) {
             return setupSuccess(doctorsList);
           },
-          doctorsError: (errorHandler) => setupError(errorHandler),
+          doctorsError: () => setupError(),
           orElse: () {
             return const SizedBox.shrink();
           },
@@ -34,9 +33,9 @@ class DoctorsBlocBuilder extends StatelessWidget {
     );
   }
 
-  Widget setupError(ErrorHandler errorHandler) {
-    return Center(
-      child: Text(errorHandler.apiErrorModel.message ?? "Unknown Error"),
+  Widget setupError() {
+    return const Center(
+      child: Text("No doctors found!"),
     );
   }
 }
