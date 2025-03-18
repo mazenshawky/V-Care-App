@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:v_care_app/core/helpers/my_spacer.dart';
-import 'package:v_care_app/core/networking/api_error_handler.dart';
+import 'package:v_care_app/core/networking/api_error_model.dart';
 import 'package:v_care_app/features/home/logic/home_cubit.dart';
 import 'package:v_care_app/features/home/logic/home_state.dart';
 import 'package:v_care_app/features/home/ui/widgets/doctors_list/doctors_shimmer_loading.dart';
@@ -54,9 +54,9 @@ class SpecializationsBlocBuilder extends StatelessWidget {
     );
   }
 
-  Widget setupError(ErrorHandler errorHandler) {
+  Widget setupError(ApiErrorModel apiErrorModel) {
     return Center(
-      child: Text(errorHandler.apiErrorModel.message ?? "Unknown Error"),
+      child: Text(apiErrorModel.message ?? "Unknown Error"),
     );
   }
 }
