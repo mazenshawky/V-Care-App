@@ -2,15 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:v_care_app/core/helpers/my_spacer.dart';
 import 'package:v_care_app/core/networking/api_error_handler.dart';
-import 'package:v_care_app/features/home/data/models/specializations_response_model.dart';
-import 'package:v_care_app/features/home/ui/widgets/doctors_list_view.dart';
-import 'package:v_care_app/features/home/ui/widgets/doctors_speciality_list_view.dart';
+import 'package:v_care_app/features/home/logic/home_cubit.dart';
+import 'package:v_care_app/features/home/logic/home_state.dart';
+import 'package:v_care_app/features/home/ui/widgets/doctors_list/doctors_shimmer_loading.dart';
+import 'package:v_care_app/features/home/ui/widgets/specializations_list/speciality_list_view.dart';
+import 'package:v_care_app/features/home/ui/widgets/specializations_list/speciality_shimmer_loading.dart';
 
-import '../../logic/home_cubit.dart';
-import '../../logic/home_state.dart';
-
-class SpecializationsAndDoctorsBlocBuilder extends StatelessWidget {
-  const SpecializationsAndDoctorsBlocBuilder({super.key});
+class SpecializationsBlocBuilder extends StatelessWidget {
+  const SpecializationsBlocBuilder({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,9 +23,8 @@ class SpecializationsAndDoctorsBlocBuilder extends StatelessWidget {
             specializationsLoading: () {
               return setupLoading();
             },
-            specializationsSuccess: (specializationsResponseModel) {
-              var specializationsList =
-                  specializationsResponseModel.specializationDataList;
+            specializationsSuccess: (specializationDataList) {
+              var specializationsList = specializationDataList;
               return setupSuccess(specializationsList);
             },
             specializationsError: (errorHandler) => setupError(errorHandler),
@@ -37,28 +35,22 @@ class SpecializationsAndDoctorsBlocBuilder extends StatelessWidget {
     );
   }
 
+  /// shimmer loading for specializations and doctors
   Widget setupLoading() {
-    return const SizedBox(
-      height: 100,
-      child: Center(
-        child: CircularProgressIndicator(),
+    return Expanded(
+      child: Column(
+        children: [
+          const SpecialityShimmerLoading(),
+          MySpacer.vertical(8),
+          const DoctorsShimmerLoading(),
+        ],
       ),
     );
   }
 
-  Widget setupSuccess(List<SpecializationsData?>? specializationsList) {
-    return Expanded(
-      child: Column(
-        children: [
-          DoctorsSpecialityListView(
-            specializationsDataList: specializationsList ?? [],
-          ),
-          MySpacer.vertical(8),
-          DoctorsListView(
-            doctorsList: specializationsList?[0]?.doctorsList,
-          ),
-        ],
-      ),
+  Widget setupSuccess(specializationsList) {
+    return SpecialityListView(
+      specializationsDataList: specializationsList ?? [],
     );
   }
 

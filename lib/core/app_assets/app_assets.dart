@@ -12,5 +12,6 @@ class SvgsAssets {
 class ImagesAssets {
   static const String onboardingDoctor = '$imagesPath/onboarding_doctor.png';
   static const String homeBluePattern = '$imagesPath/home_blue_pattern.png';
+  static const String hisoka = '$imagesPath/hisoka.webp';
   static const String girl = '$imagesPath/girl.png';
 }

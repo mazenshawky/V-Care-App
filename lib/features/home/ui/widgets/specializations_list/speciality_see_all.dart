@@ -1,8 +1,8 @@
 import 'package:flutter/widgets.dart';
 import 'package:v_care_app/core/theming/styles.dart';
 
-class DoctorsSpecialitySeeAll extends StatelessWidget {
-  const DoctorsSpecialitySeeAll({super.key});
+class SpecialitySeeAll extends StatelessWidget {
+  const SpecialitySeeAll({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:v_care_app/core/app_assets/app_assets.dart';
 import 'package:v_care_app/core/helpers/my_spacer.dart';
 
-import '../../../../core/theming/styles.dart';
-import '../../data/models/specializations_response_model.dart';
+import '../../../../../core/theming/styles.dart';
+import '../../../data/models/specializations_response_model.dart';
 
 class DoctorsListViewItem extends StatelessWidget {
   const DoctorsListViewItem({super.key, this.doctorsModel});
@@ -23,6 +24,12 @@ class DoctorsListViewItem extends StatelessWidget {
               height: 120.h,
               'https://static.wikia.nocookie.net/five-world-war/images/6/64/Hisoka.jpg/revision/latest?cb=20190313114050',
               fit: BoxFit.cover,
+              errorBuilder: (context, error, stackTrace) => Image.asset(
+                ImagesAssets.hisoka,
+                width: 110.w,
+                height: 120.h,
+                fit: BoxFit.cover,
+              ),
             ),
           ),
           MySpacer.horizontal(16),
