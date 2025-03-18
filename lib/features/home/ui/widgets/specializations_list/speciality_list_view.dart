@@ -22,7 +22,7 @@ class _SpecialityListViewState extends State<SpecialityListView> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 100.h,
+      height: 125.h,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: widget.specializationsDataList.length,
